@@ -7,10 +7,10 @@ public class KisoKadai2 {
 
 		System.out.println("-- 数当てゲーム --");
 
-		answer=0+(int)(Math.random()*100.0);
+		answer=1+(int)(Math.random()*100.0);
 
 		while(true){
-			System.out.println("《0～100までの半角数字を入力してください》");
+			System.out.println("《1～100までの半角数字を入力してください》");
 			counter ++;
 			input= new java.util.Scanner(System.in).nextInt();
 

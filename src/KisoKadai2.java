@@ -22,15 +22,14 @@ System.out.print("1～100までの数字を入力してください ");
                       i = Integer.parseInt(buf);
 
                       if(answer < i){System.out.println(i +"よりは小さい");
-                      }else if(answer>i){System.out.println(i +"よりは大きい");
-                      }else if(answer==i){System.out.println("正解です! ～おめでとうございます～");
-                      break;
-                      }
+                      	}else if(answer>i){System.out.println(i +"よりは大きい");
+                      		}else if(answer==i){System.out.println("正解です! ～おめでとうございます～");
+                      				break;
+                      		}
               }catch(Exception e){
 
             	  System.out.println("※半角数字で入力してください");
-              }
-
-      }
+            }
+        }
 	}
 }

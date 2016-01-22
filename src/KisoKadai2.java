@@ -1,31 +1,36 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 public class KisoKadai2 {
 
 	public static void main(String[] args) {
-		int answer;
-		int input;
-		int counter = 0;
 
-		System.out.println("-- 数当てゲーム --");
+		InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
 
+        int answer;
+
+
+
+System.out.println("☆数当てゲーム☆");
+System.out.print("1～100までの数字を入力してください ");
 		answer=1+(int)(Math.random()*100.0);
+        while(true){
 
-		while(true){
-			System.out.println("《1～100までの半角数字を入力してください》");
-			counter ++;
-			input= new java.util.Scanner(System.in).nextInt();
+	    	  int i;
+              try{
+                      String buf = br.readLine();
+                      i = Integer.parseInt(buf);
 
-			if(input < answer) {
-				System.out.println(input + "よりは大きい");
-			} else if(input > answer) {
-				System.out.println(input + "よりは小さい");
-			} else {
-				System.out.println("正解!～Congratulation～");
-				break;
-					}
-				}
-		System.out.println("正解までに " + counter + "回かかりました。");
-			}
+                      if(answer < i){System.out.println(i +"よりは小さい");
+                      }else if(answer>i){System.out.println(i +"よりは大きい");
+                      }else if(answer==i){System.out.println("正解です! ～おめでとうございます～");
+                      break;
+                      }
+              }catch(Exception e){
 
+            	  System.out.println("※半角数字で入力してください");
+              }
 
-
+      }
 	}
+}

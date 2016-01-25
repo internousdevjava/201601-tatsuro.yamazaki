@@ -21,14 +21,15 @@ System.out.print("1～100までの数字を入力してください ");
                       String buf = br.readLine();
                       i = Integer.parseInt(buf);
 
-                      if(answer < i){System.out.println(i +"よりは小さい");
-                      	}else if(answer>i){System.out.println(i +"よりは大きい");
+                      if(i >=101){System.out.println("1～100までの数字を入力してください");
+                      		}else if(i<1){System.out.println("1～100までの数字を入力してください");
+                      		}else if(answer>i){System.out.println(i +"よりは大きい");
+                      		}else if(answer < i){System.out.println(i +"よりは小さい");
                       		}else if(answer==i){System.out.println("正解です! ～おめでとうございます～");
-                      				break;
-                      		}
+                      		break;}
               }catch(Exception e){
 
-            	  System.out.println("※半角数字で入力してください");
+            	  System.out.println("※1～100までの半角数字で入力してください");
             }
         }
 	}

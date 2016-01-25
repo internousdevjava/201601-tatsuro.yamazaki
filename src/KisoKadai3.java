@@ -1,4 +1,4 @@
-	import java.io.BufferedReader;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -132,7 +132,7 @@ case 4:    try{
           }
 
         break;
-case 5:  System.out.println("Bye");q=1;
+case 5:  System.out.println("プログラムを終了します");q=1;
         break;
 
 		  }

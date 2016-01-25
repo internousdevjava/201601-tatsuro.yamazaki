@@ -27,7 +27,7 @@ while(q==0){
                 z=0;
 				while(z==0){
 		            try{
-		            	System.out.println("");
+		            	System.out.println("操作メニュー");
 		                System.out.println("新規作成:1    上書き:2    追記:3    読み込み:4    終了:5");
 
 		                    String b = br.readLine();
@@ -115,16 +115,18 @@ case 3:    try{
 
 
 case 4:    try{
+
                      y=br.readLine();
 
                 File f = new File(y);
-                FileReader fd = new FileReader(f);
+                FileReader ee = new FileReader(f);
 
-                  int ch = fd.read();
-                 while((ch = fd.read())!=-1){
-                                      System.out.print((char)ch);
+                  int ch = ee.read();
+                 while(ch != -1){
+                 System.out.print((char)ch);
+                                      ch=ee.read();
                                   }
-                 fd.close();
+                 ee.close();
           }catch(FileNotFoundException n){
                                System.out.println(n);
           }catch(IOException n){

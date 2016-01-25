@@ -10,15 +10,11 @@ public class KisoKadai1 {
 		   int y = new java.util.Scanner(System.in).nextInt();
 		   for( int i=1; i<=x; i ++) {
 	        for( int j=1; j<=y; j ++) {
-	    	  int value = i * j;
-	    	  System.out.print(i + "X" + j + "=");
 
-	    	  if(value < 10) {
+	    	  System.out.print(i*j);{
 
 	    	System.out.print(" ");
 	    	  }
-
-	    	  System.out.print(value +" ");
 	       }
 	       System.out.println();
 	       	}
